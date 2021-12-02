@@ -17,9 +17,12 @@ const userLastname = prompt('Inserisci il tuo cognome');
 
 const userFavouriteColour = prompt('Inserisci il tuo colore preferito');
 
+// sommo i valori dati dall'utente per generare password, aggiungendo l'anno corrente //
+
+let password = userName + userLastname + userFavouriteColour + '21'; 
 
 // creo variabile let che si collega all'html -> id 'password //
-// grazie al div id 'password' posso far stampare (far comparire nella pagina) la mia password //
+// grazie al div id 'password' e i dati rilasciati dall'utente, posso far stampare la password //
 
 let htmlElement = document.getElementById('password');
-htmlElement.innerHTML = `ChiaraCardinalerosso21 ${userName} ${userLastname} ${userFavouriteColour}`;
+htmlElement.innerHTML = `${password}`;
